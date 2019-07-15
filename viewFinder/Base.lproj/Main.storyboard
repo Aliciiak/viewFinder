@@ -67,7 +67,7 @@
         <!--Add Photo-->
         <scene sceneID="UFj-vd-JPi">
             <objects>
-                <viewController id="FdA-Xh-IbF" sceneMemberID="viewController">
+                <viewController id="FdA-Xh-IbF" customClass="AddPhotoViewController" customModule="viewFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1S7-LB-P5V">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -76,11 +76,17 @@
                                 <rect key="frame" x="53" y="489" width="76" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Take Photo"/>
+                                <connections>
+                                    <action selector="cameraTapped:" destination="FdA-Xh-IbF" eventType="touchUpInside" id="fXH-bS-nuQ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKH-He-Eeg">
                                 <rect key="frame" x="231" y="488" width="140" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Choose from Library"/>
+                                <connections>
+                                    <action selector="albumsTapped:" destination="FdA-Xh-IbF" eventType="touchUpInside" id="UHf-UF-YAM"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yGW-ow-uBc">
                                 <rect key="frame" x="84" y="352" width="246" height="30"/>
@@ -103,6 +109,9 @@
                         <viewLayoutGuide key="safeArea" id="kcf-wU-jdv"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Photo" id="EEg-Dv-DNY"/>
+                    <connections>
+                        <outlet property="imageView" destination="Ue6-wc-add" id="oTb-Sh-GvC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xLj-cu-qLI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
