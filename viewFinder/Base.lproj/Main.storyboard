@@ -13,7 +13,7 @@
         <!--View Finder-->
         <scene sceneID="Le0-N4-GqZ">
             <objects>
-                <tableViewController id="NQt-zB-qxZ" sceneMemberID="viewController">
+                <tableViewController id="NQt-zB-qxZ" customClass="PhotoTableViewController" customModule="viewFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="GeJ-yV-aap">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,10 +95,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mGf-nN-JbB">
-                                <rect key="frame" x="193" y="412" width="34" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oaQ-bX-Ddc">
+                                <rect key="frame" x="193" y="412" width="34" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="savedPhotoTapped:" destination="FdA-Xh-IbF" eventType="touchUpInside" id="JZK-NL-vXb"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="instagram-circle" translatesAutoresizingMaskIntoConstraints="NO" id="Ue6-wc-add">
                                 <rect key="frame" x="34" y="96" width="337" height="248"/>
@@ -110,6 +113,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Add Photo" id="EEg-Dv-DNY"/>
                     <connections>
+                        <outlet property="captionText" destination="yGW-ow-uBc" id="96b-L9-XKu"/>
                         <outlet property="imageView" destination="Ue6-wc-add" id="oTb-Sh-GvC"/>
                     </connections>
                 </viewController>
